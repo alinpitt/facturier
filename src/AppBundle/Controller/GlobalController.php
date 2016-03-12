@@ -36,7 +36,7 @@ class GlobalController extends Controller
         );
 
         $res = $this->render(
-            'global/testalin.html.twig',
+            'base.html.twig',
             array('r'=>$r,'rez'=>$data1,'number' => $number, 'var1'=>'111')
         );
 
