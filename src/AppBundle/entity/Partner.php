@@ -58,7 +58,6 @@ class Partner
      */
     private $iban;
 
-
     /**
      * @var \DateTime
      *
