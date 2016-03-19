@@ -46,12 +46,13 @@ private $documentLines;
  * @ORM\Column(name="doc_number", type="string")
  */
 private $docNumber;
-/**
- *
- * @var string
- * @ORM\Column(name="doc_status", type="string")
- */
-private $docStatus;
+    /**
+     * @var integer
+     *
+     * @ORM\ManyToOne(targetEntity="DocStatus")
+     * @ORM\JoinColumn(name="docstatus_id", referencedColumnName="id")
+     */
+private $docstatus;
 /**
  *
  * @var \DateTime
