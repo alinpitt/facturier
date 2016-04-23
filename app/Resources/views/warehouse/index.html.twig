@@ -1,13 +1,12 @@
-{% extends 'base.html.twig' %}
-{% block submenu %}
-    <ul class="nav nav-sidebar">
-        <li>
-            <a href="{{ path('warehouse_new') }}">Add new</a>
-        </li>        
-        <li>
-            <a href="{{ path('warehouse_index') }}">List</a>
-        </li>
+{% extends 'product/product_layout.html.twig' %}
+{% trans_default_domain 'AppBundle' %}
 
+{% block submenu %}
+    {{ parent() }}
+    <hr />
+    <ul class="nav nav-sidebar">
+        <li><a href="{{ path('warehouse_new') }}">{% trans %}Add new{% endtrans %}</a></li>
+        <li><a href="{{ path('warehouse_index') }}">{% trans %}List{% endtrans %}</a></li>
     </ul>
 {% endblock %}
 {% block body %}
@@ -17,12 +16,12 @@
     <table class="table table-hover records_list">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Warehouse name</th>
-                <th>Warehouse address</th>
-                <th>Datcre</th>
-                <th>Datupd</th>
-                <th>Actions</th>
+                <th>{% trans %}Id{% endtrans %}</th>
+                <th>{% trans %}Warehouse name{% endtrans %}</th>
+                <th>{% trans %}Warehouse address{% endtrans %}</th>
+                <th>{% trans %}Datcre{% endtrans %}</th>
+                <th>{% trans %}Datupd{% endtrans %}</th>
+                <th>{% trans %}Actions{% endtrans %}</th>
             </tr>
         </thead>
         <tbody>
@@ -45,5 +44,6 @@
         {% endfor %}
         </tbody>
     </table>
+
 </div>
 {% endblock %}
